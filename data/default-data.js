@@ -1,0 +1,106 @@
+import Category from '../models/category';
+import CategoryObject from '../models/category_object';
+
+const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+const alphabet_Array = [
+   new CategoryObject("A", "https://storage.googleapis.com/childrenapp_storage/inkpx-word-art-A.png"),
+   new CategoryObject("B", "https://storage.googleapis.com/childrenapp_storage/inkpx-word-art-B.png"),
+   new CategoryObject("C", "https://storage.googleapis.com/childrenapp_storage/inkpx-word-art-C.png"),
+   new CategoryObject("D", "https://storage.googleapis.com/childrenapp_storage/inkpx-word-art-D.png"),
+   new CategoryObject("E", "https://storage.googleapis.com/childrenapp_storage/inkpx-word-art-E.png"),
+   new CategoryObject("F", "https://storage.googleapis.com/childrenapp_storage/inkpx-word-art-F.png"),
+   new CategoryObject("G", "https://storage.googleapis.com/childrenapp_storage/inkpx-word-art-G.png"),
+   new CategoryObject("H", "https://storage.googleapis.com/childrenapp_storage/inkpx-word-art-H.png"),
+   new CategoryObject("I", "https://storage.googleapis.com/childrenapp_storage/inkpx-word-art-I.png"),
+   new CategoryObject("J", "https://storage.googleapis.com/childrenapp_storage/inkpx-word-art-J.png"),
+   new CategoryObject("K", "https://storage.googleapis.com/childrenapp_storage/inkpx-word-art-K.png"),
+   new CategoryObject("L", "https://storage.googleapis.com/childrenapp_storage/inkpx-word-art-L.png"),
+   new CategoryObject("M", "https://storage.googleapis.com/childrenapp_storage/inkpx-word-art-M.png"),
+   new CategoryObject("N", "https://storage.googleapis.com/childrenapp_storage/inkpx-word-art-N.png"),
+   new CategoryObject("O", "https://storage.googleapis.com/childrenapp_storage/inkpx-word-art-O.png"),
+   new CategoryObject("P", "https://storage.googleapis.com/childrenapp_storage/inkpx-word-art-P.png"),
+   new CategoryObject("Q", "https://storage.googleapis.com/childrenapp_storage/inkpx-word-art-Q.png"),
+   new CategoryObject("R", "https://storage.googleapis.com/childrenapp_storage/inkpx-word-art-R.png"),
+   new CategoryObject("S", "https://storage.googleapis.com/childrenapp_storage/inkpx-word-art-S.png"),
+   new CategoryObject("T", "https://storage.googleapis.com/childrenapp_storage/inkpx-word-art-T.png"),
+   new CategoryObject("U", "https://storage.googleapis.com/childrenapp_storage/inkpx-word-art-U.png"),
+   new CategoryObject("V", "https://storage.googleapis.com/childrenapp_storage/inkpx-word-art-V.png"),
+   new CategoryObject("W", "https://storage.googleapis.com/childrenapp_storage/inkpx-word-art-W.png"),
+   new CategoryObject("X", "https://storage.googleapis.com/childrenapp_storage/inkpx-word-art-X.png"),
+   new CategoryObject("Y", "https://storage.googleapis.com/childrenapp_storage/inkpx-word-art-Y.png"),
+   new CategoryObject("Z", "https://storage.googleapis.com/childrenapp_storage/inkpx-word-art-Z.png")
+];
+const animals_Array = [
+   new CategoryObject("Alligator", "https://storage.googleapis.com/childrenapp_storage/Alligator.png"),
+   new CategoryObject("Bear", "https://storage.googleapis.com/childrenapp_storage/Bear.png"),
+   new CategoryObject("Cat", "https://storage.googleapis.com/childrenapp_storage/Cat.png"),
+   new CategoryObject("Dog", "https://storage.googleapis.com/childrenapp_storage/Dog.png"),
+   new CategoryObject("Elephant", "https://storage.googleapis.com/childrenapp_storage/Elephant.png"),
+   new CategoryObject("Fox", "https://storage.googleapis.com/childrenapp_storage/Fox.png"),
+   new CategoryObject("Giraffe", "https://storage.googleapis.com/childrenapp_storage/Giraffe.png"),
+   new CategoryObject("Horse", "https://storage.googleapis.com/childrenapp_storage/Horse.png"),
+   new CategoryObject("Iguana", "https://storage.googleapis.com/childrenapp_storage/Iguana.png"),
+   new CategoryObject("Jaguar", "https://storage.googleapis.com/childrenapp_storage/Jaguar.png"),
+   new CategoryObject("Kangaroo", "https://storage.googleapis.com/childrenapp_storage/Kangaroo.png"),
+   new CategoryObject("Lion", "https://storage.googleapis.com/childrenapp_storage/Lion.png"),
+   new CategoryObject("Monkey", "https://storage.googleapis.com/childrenapp_storage/Monkey.png"),
+   new CategoryObject("Nightingale", "https://storage.googleapis.com/childrenapp_storage/Nightingale.png"),
+   new CategoryObject("Ostrich", "https://storage.googleapis.com/childrenapp_storage/Ostrich.png"),
+   new CategoryObject("Penguin", "https://storage.googleapis.com/childrenapp_storage/Penguin.png"),
+   new CategoryObject("Quail", "https://storage.googleapis.com/childrenapp_storage/Quail.png"),
+   new CategoryObject("Raccoon", "https://storage.googleapis.com/childrenapp_storage/Raccoon.png"),
+   new CategoryObject("Sheep", "https://storage.googleapis.com/childrenapp_storage/Sheep.png"),
+   new CategoryObject("Tiger", "https://storage.googleapis.com/childrenapp_storage/Tiger.png"),
+   new CategoryObject("Unicorn", "https://storage.googleapis.com/childrenapp_storage/Unicorn.png"),
+   new CategoryObject("Vulture", "https://storage.googleapis.com/childrenapp_storage/Vulture.png"),
+   new CategoryObject("Wolf", "https://storage.googleapis.com/childrenapp_storage/Wolf.png"),
+   new CategoryObject("Xerus", "https://storage.googleapis.com/childrenapp_storage/Xerus.png"),
+   new CategoryObject("Yak", "https://storage.googleapis.com/childrenapp_storage/Yak.png"),
+   new CategoryObject("Zebra", "https://storage.googleapis.com/childrenapp_storage/Zebra.png")
+]
+
+export const fruits = [
+    new CategoryObject('Apple', 'https://storage.googleapis.com/childrenapp_storage/Apple.png'),
+    new CategoryObject('Banana', 'https://storage.googleapis.com/childrenapp_storage/Banana.png'),
+    new CategoryObject('Cherry', 'https://storage.googleapis.com/childrenapp_storage/Cherry.png'),
+    new CategoryObject('Dragon Fruit', 'https://storage.googleapis.com/childrenapp_storage/DragonFruit.png'),
+    new CategoryObject('Elderberry', 'https://storage.googleapis.com/childrenapp_storage/Elderberry.png'),
+    new CategoryObject('Fig', 'https://storage.googleapis.com/childrenapp_storage/Fig.png'),
+    new CategoryObject('Grapes', 'https://storage.googleapis.com/childrenapp_storage/Grapes.png'),
+    new CategoryObject('Honeydew', 'https://storage.googleapis.com/childrenapp_storage/Honeydew.png'),
+    new CategoryObject('Incaberry', 'https://storage.googleapis.com/childrenapp_storage/Incaberry.png'),
+    new CategoryObject('Jackfruit', 'https://storage.googleapis.com/childrenapp_storage/Jackfruit.png'),
+    new CategoryObject('Kiwi', 'https://storage.googleapis.com/childrenapp_storage/Kiwi.png'),
+    new CategoryObject('Lemon', 'https://storage.googleapis.com/childrenapp_storage/Lemon.png'),
+    new CategoryObject('Mango', 'https://storage.googleapis.com/childrenapp_storage/Mango.png'),
+    new CategoryObject('Nectarine', 'https://storage.googleapis.com/childrenapp_storage/Nectarine.png'),
+    new CategoryObject('Orange', 'https://storage.googleapis.com/childrenapp_storage/Orange.png'),
+    new CategoryObject('Pineapple', 'https://storage.googleapis.com/childrenapp_storage/Pineapple.png'),
+    new CategoryObject('Quince', 'https://storage.googleapis.com/childrenapp_storage/Quince.png'),
+    new CategoryObject('Raspberry', 'https://storage.googleapis.com/childrenapp_storage/Raspberry.png'),
+    new CategoryObject('Tangerine', 'https://storage.googleapis.com/childrenapp_storage/Tangerine.png'),
+    new CategoryObject('Ugli fruit', 'https://storage.googleapis.com/childrenapp_storage/UgliFruit.png'),
+    new CategoryObject('Velvet Round Apple', 'https://storage.googleapis.com/childrenapp_storage/VelvetRoundApple.png'),
+    new CategoryObject('Ximenia', 'https://storage.googleapis.com/childrenapp_storage/Ximenia.png'),
+    new CategoryObject('Yuzu', 'https://storage.googleapis.com/childrenapp_storage/Yuzu.png'),
+    new CategoryObject('Zebra Fruit', 'https://storage.googleapis.com/childrenapp_storage/ZebraFruit.png')
+  ];
+
+  const vehicles = [
+    new CategoryObject('Airplane', 'https://storage.googleapis.com/childrenapp_storage/Airplane.png'),
+    new CategoryObject('Ambulance', 'https://storage.googleapis.com/childrenapp_storage/Ambulance.png'),
+    new CategoryObject('Bicycle', 'https://storage.googleapis.com/childrenapp_storage/Bicycle.png'),
+    new CategoryObject('Boat', 'https://storage.googleapis.com/childrenapp_storage/Boat.png'),
+    new CategoryObject('Bus', 'https://storage.googleapis.com/childrenapp_storage/Bus.png'),
+    new CategoryObject('Motorcycle', 'https://storage.googleapis.com/childrenapp_storage/Motorcycle.png'),
+    new CategoryObject('Tractor', 'https://storage.googleapis.com/childrenapp_storage/Tractor.png'),
+    new CategoryObject('Train', 'https://storage.googleapis.com/childrenapp_storage/Train.png'),
+    new CategoryObject('Truck', 'https://storage.googleapis.com/childrenapp_storage/Truck.png'),
+  ]
+
+  export const CATEGORIES = [
+  new Category('c1', 'Alphabet', alphabet_Array, 'https://storage.googleapis.com/childrenapp_storage/alphabet.png', false),
+  new Category('c2', 'Animals', animals_Array, 'https://storage.googleapis.com/childrenapp_storage/animals.png', false),
+  new Category('c3', 'Fruits', fruits, 'https://storage.googleapis.com/childrenapp_storage/fruits.png', true),
+  new Category('c4', 'Vehicles', vehicles, 'https://storage.googleapis.com/childrenapp_storage/vehicles.png', false),
+];
