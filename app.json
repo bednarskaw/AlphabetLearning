@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "AlphabetLearning",
-    "slug": "AlphabetLearning",
+    "slug": "alphabetlearning",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -21,10 +21,17 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.bednarska.w.alphabetlearning"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "e939b9c2-ac64-4d10-a465-da0d7b0e0a3d"
+      }
+    },
+    "owner": "bednarska.w"
   }
 }

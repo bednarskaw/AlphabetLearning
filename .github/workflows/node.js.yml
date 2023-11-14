@@ -1,0 +1,28 @@
+name: EAS Build
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    name: Install and build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20.x
+          cache: npm
+      - name: Remove package for build
+        run: rm package-lock.json
+      - name: Install Dependencies and Build
+        run: npm install
+      - name: Setup Expo and EAS
+        uses: expo/expo-github-action@v8
+        with:
+          eas-version: latest
+          token: ${{ secrets.ALPHABET_EXPO_TOKEN }}
+      - run: eas init --non-interactive --id e939b9c2-ac64-4d10-a465-da0d7b0e0a3d
+      - name: Build project
+        run: eas build --platform android --non-interactive
